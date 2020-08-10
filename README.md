@@ -1,24 +1,15 @@
 # upload-file
 
-## Project setup
-```
-yarn install
-```
+## Frontend
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+一个大文件上传 demo
 
-### Compiles and minifies for production
-```
-yarn build
-```
+`Blob.prototype.slice` 方法返回原文件的某个切片
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Backend
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
++ 传输完成合并切片
++ 如何合并
+
+
+
