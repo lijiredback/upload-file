@@ -9,12 +9,14 @@
 import UploadFile from './components/UploadFile.vue'
 
 export default {
-    name: 'App',
+    name: 'app',
     components: {
         UploadFile
     }
 }
+
 </script>
 
 <style>
+
 </style>
