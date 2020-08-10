@@ -1,7 +1,8 @@
 <template>
     <div class="upload">
+        <!-- 上传控件 -->
         <input type="file" @change="handleFileChange" />
-        <el-button type="primary" size="small">点击上传</el-button>
+        <el-button type="primary" size="small" @click="handleUpload">点击上传</el-button>
     </div>
 </template>
 
@@ -9,12 +10,26 @@
 export default {
     name: 'UploadFile',
     data() {
-        return {}
+        return {
+            container: {
+                file: null
+            }
+        }
     },
     methods: {
         // addEventListener for input file changed
         handleFileChange(e) {
-            console.log(e)
+            // console.log(e)
+            const [file] = e.target.files
+
+            if (!file) return
+
+            Object.assign(this.$data, this.$options.data())
+            this.container.file = file
+        },
+        // click button to upload file
+        async handleUpload() {
+            
         }
     }
 }
